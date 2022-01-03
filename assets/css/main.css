@@ -1,0 +1,99 @@
+*
+{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+body {
+    height : 100vh;
+    background-color : #dadada;
+    display : flex;
+}
+.wrapper {
+    display: flex;
+    align-items : center;
+    justify-content : space-between;
+    margin:  auto;
+    flex-wrap: wrap;
+    width : 1200px;
+
+}
+img {
+    width : 100%;
+    height : 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.5s;
+}
+.image
+{
+    width : 22%;
+    height : 220px;
+    margin : 10px;
+    border-radius :4px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.image:hover img
+{
+    transform: scale(1.2)
+}
+.gallery
+{
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    width : 100%;
+    height : 100%;
+     opacity: 0; 
+    position :fixed;
+    display : flex;
+    align-items : center;
+    pointer-events: none;
+    transform: scale(0.8);
+    transition: 0.5s;
+}
+.gallery-inner
+{
+    width : 70%;
+    height : 70%;
+    margin:  100px auto;
+}
+.gallery-inner img{
+    width : 100%;
+    height : 100%;
+    object-fit: contain;
+    
+}
+.show
+{
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1)
+}
+.control
+{
+    position : absolute;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 50px;
+    cursor: pointer;
+}
+.prev
+{
+    left: 15px
+}
+.hide {
+    display: none; 
+}
+.next
+{
+    right: 15px;
+}
+.close
+{
+    font-size: 35px;
+    color : white;
+    top : 15px;
+    right : 15px;
+    position : fixed;
+}
